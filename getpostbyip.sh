@@ -16,7 +16,7 @@ echo "launching a few pings to fill arp data.";
 ping -q -c 4 $ip;
 
 printf "Showing arp infos : \e[92m";
-arp -a | grep -F "$ip";
+arp -a | grep -F "($ip)";
 
 #Nmap part
 printf "\e[39m Do you want us to launch nmap utilities? (y or n): ";
